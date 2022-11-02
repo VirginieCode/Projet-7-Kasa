@@ -1,0 +1,40 @@
+.Erreur{
+    font-size: 288px;
+    font-family: Montserrat,sans-serif;
+    color: #FF6060;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-top: 100px;
+}
+
+.Oups{
+    color: #FF6060;
+    font-size: 36px;
+    font-weight: 500;
+    font-family: Montserrat, sans-serif;
+}
+
+.Retour{
+    color: #FF6060;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    text-decoration: underline;
+    
+}
+
+@media only screen and (max-width: 768px){
+
+   .Erreur{
+    font-size: 96px;
+   }
+
+   .Oups{
+    font-size: 18px;
+   }
+
+   .Retour{
+    font-size: 18px;
+   }
+}

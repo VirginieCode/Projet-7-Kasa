@@ -1,5 +1,8 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import './Erreur404.css';
+import { useNavigate } from 'react-router-dom';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 
 export default function Erreur() {
@@ -10,8 +13,11 @@ export default function Erreur() {
     }
   return (
     <div>
-        <h1>Erreur</h1>
-        <p onClick={retourAcceuil}>Retourner sur la page d'acceuil</p>
+        <Header />
+        <h1 className='Erreur'>404</h1>
+        <p className='Oups'>Oups! La page que vous demandez n'existe pas.</p>
+        <p className='Retour' onClick={retourAcceuil}>Retourner sur la page d'acceuil</p>
+        <Footer />
     </div>
   )
 }

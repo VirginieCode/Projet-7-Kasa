@@ -11,7 +11,7 @@ export default function NavBar() {
           return isActive ? "activeLink" : "";
         }}
       >
-        Acceuil
+        Accueil
       </NavLink>
       
       <NavLink
