@@ -1,0 +1,11 @@
+.Container{
+    display: flex;
+    justify-content: center;
+}
+
+.Background{
+    width: 1240px;
+    height: 829px;
+    background-color: #F7F7F7;
+    border-radius: 25px;
+}

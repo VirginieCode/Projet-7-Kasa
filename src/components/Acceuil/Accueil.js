@@ -1,9 +1,13 @@
 import React from 'react'
-
+import Banner from '../Banner/Banner'
+import Header from '../Header/Header'
+import Cards from '../Cards/Cards'
 export default function Home() {
   return (
-    <div>
-        <h1>Bienvenue sur le site Kasa</h1>
+    <div className="Acceuil">
+      <Header />
+      <Banner />
+      <Cards />
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import '../Header/Header.css'
 
 export default function NavBar() {
   return (
@@ -19,7 +20,7 @@ export default function NavBar() {
           return isActive ? "activeLink" : "";
         }}
       >
-        À Propos
+        A Propos
       </NavLink>
     </nav>
   );
