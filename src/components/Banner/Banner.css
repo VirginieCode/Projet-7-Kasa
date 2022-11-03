@@ -1,6 +1,11 @@
 .Titre{
     font-family: Montserrat,sans-serif;
     font-weight: 500;
+    font-size: 48px;
+    position: absolute;
+    margin-top: 150px;
+    color: #FFFFFF;
+    
 }
 
 .Image{
@@ -8,5 +13,5 @@ height: 223px;
 width: 1240px;
 border-radius: 25px;
 margin-top: 60px;
-
+filter: brightness(50%);
 }

@@ -5,8 +5,8 @@ import BannerImage from '../../Images/BannerBackground.png'
 
 export default function Banner() {
   return (
-    <div className='Test'>
-        <img className='Image' src={BannerImage} alt ="" />
+    <div className='Container'>
+       <div> <img className='Image' src={BannerImage} alt ="" /> </div>
         <h2 className='Titre'>Chez vous, partout et ailleurs</h2>
     </div>
   )

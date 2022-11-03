@@ -1,6 +1,8 @@
 .Container{
+   
     display: flex;
     justify-content: center;
+    
 }
 
 .Background{
@@ -8,4 +10,37 @@
     height: 829px;
     background-color: #F7F7F7;
     border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box{
+    
+    border-radius: 10px;
+    width: 340px;
+    height: 340px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    
+}
+
+.Cover{
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    word-wrap: break-word;
+    
+    
+}
+
+.Title{
+    position: absolute;
+    margin-top: 250px;
+    display: block;
+    font-size: 18px;
+    font-family: Montserrat,sans-serif;
+    font-weight: 500;
+   
 }
