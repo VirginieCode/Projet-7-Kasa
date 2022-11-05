@@ -9,7 +9,7 @@ export default function Banner(props) {
         
        <div className='Content'> 
        <h2 className='Titre'><span>{props.title}</span></h2>
-        <img className='Image' src={BannerImage} alt ="" />
+        <img className='Image' src={props.img} alt ="" />
          </div>
     </div>
   )
