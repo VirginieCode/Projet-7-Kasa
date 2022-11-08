@@ -29,9 +29,7 @@ export default function Collapse(props) {
       style={{height: toggle ? `${heightEl}`: "0px"}}
       >
         <p>
-          La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
-          comportement discriminatoire ou de perturbation du voisinage
-          entraînera une exclusion de notre plateforme.
+          {props.description}
         </p>
       </div>
     </div>

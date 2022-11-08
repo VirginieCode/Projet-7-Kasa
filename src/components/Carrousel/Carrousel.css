@@ -1,0 +1,18 @@
+
+.carrouselConatainer{
+    
+  
+    left: 0px;
+    top: 0px;
+    border-radius: 25px;
+    border: solid black 2px;
+    margin: auto;
+    
+}
+
+.Image{
+    width: 90%;
+    height: 300px;
+    filter: brightness(1);
+    margin-top: 20px;
+}

@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*border: solid black;*/
+}
+
+
+.titleEThost{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.titleEThost h1{
+font-family: montserrat, sans-serif;
+font-weight: 500;
+font-size: 36px;
+color: #FF6060;
+
+}
+
+.host{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.host p{
+    font-family: montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: right;
+    color: #FF6060;
+    margin-right: 15px;
+    
+}
+.host img {
+    border-radius: 50%;
+    width: 64px;
+}
+
+.location{
+    text-align: left;
+    margin-bottom: 20px;
+    font-family: Montserrat,sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FF6060;
+
+}
+
+.TagETStars{
+    display: flex;
+    justify-content: space-around;
+}
+
+.Collapses{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.Collapse{
+    margin: 10px;
+    width: 582;
+}
