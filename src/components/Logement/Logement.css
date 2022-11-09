@@ -1,21 +1,25 @@
 *{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
     /*border: solid black;*/
 }
 
 
+
 .titleEThost{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     margin-top: 10px;
+ 
 }
 
 .titleEThost h1{
 font-family: montserrat, sans-serif;
 font-weight: 500;
-font-size: 36px;
+font-size: 25px;
 color: #FF6060;
+
 
 }
 
@@ -32,7 +36,7 @@ color: #FF6060;
     letter-spacing: 0em;
     text-align: right;
     color: #FF6060;
-    margin-right: 15px;
+    
     
 }
 .host img {
@@ -50,6 +54,9 @@ color: #FF6060;
     letter-spacing: 0em;
     text-align: left;
     color: #FF6060;
+    margin-left: 50px;
+    position: relative;
+    top: -10px;
 
 }
 
@@ -60,11 +67,9 @@ color: #FF6060;
 
 .Collapses{
     display: flex;
-    justify-content: space-around;
-    
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    width: 80%;
 }
 
-.Collapse{
-    margin: 10px;
-    width: 582;
-}

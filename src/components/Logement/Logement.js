@@ -31,13 +31,15 @@ for (i = 0; i < tags.length; i++) {
 
  */
 
+ //Rating
+
   return (
     <div key={ID}>
       <Header />
 
       <div className="container">
         <Carrousel slides={findLogement.pictures} />
-      </div>
+    
 
       <div className="titleEThost">
         <h1> {findLogement.title}</h1>
@@ -58,6 +60,8 @@ for (i = 0; i < tags.length; i++) {
         <Collapse title="Description" description={findLogement.description} />
         <Collapse title="Equipements" description={findLogement.equipments} />
       </div>
+    </div>
+
     </div>
   );
 }
