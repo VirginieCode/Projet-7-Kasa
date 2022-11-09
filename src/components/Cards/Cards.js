@@ -1,6 +1,6 @@
 import React from 'react'
 import './Cards.css'
-import Logement from './Logement.json'
+import Logement from '../Logement Data/Logement.json'
 import Footer from '../Footer/Footer'
 
 export default function Cards() {

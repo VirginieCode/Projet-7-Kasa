@@ -15,6 +15,9 @@
     color: #FFFFFF;
     font-size: 24px;
     font-family: Montserrat,sans-serif;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 25px;
     
 }
 

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import Header from "../Header/Header";
+import Header from "../../components/Header/Header";
 import { Route, Link, Routes, useParams } from "react-router-dom";
-import LogementFile from "../Cards/Logement.json";
-import "../Cards/Logement.json";
-import Collapse from "../Collapse/Collapse";
-import Carrousel from "../Carrousel/Carrousel";
+import LogementFile from "../../components/Logement Data/Logement.json";
+import "../../components/Logement Data/Logement.json";
+import Collapse from "../../components/Collapse/Collapse";
+import Carrousel from "../../components/Carrousel/Carrousel";
 
 import "./Logement.css";
 
@@ -21,17 +21,8 @@ export default function Logement() {
 
   console.log(findLogement);
 
-  /*
-const length = tags.length;
 
-for (i = 0; i < tags.length; i++) {
-  let lesTags = tags[i];
-
- console.log(lesTags)}
-
- */
-
- //Rating
+ 
 
   return (
     <div key={ID}>

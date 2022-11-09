@@ -1,9 +1,9 @@
 import React from 'react'
-import Collapse from '../Collapse/Collapse'
-import Header from '../Header/Header'
-import Banner from '../Banner/Banner'
-import Footer from '../Footer/Footer'
-import BannerImage from '../../Images/BannerAPropos.png'
+import Collapse from '../../../components/Collapse/Collapse'
+import Header from '../../../components/Header/Header'
+import Banner from '../../../components/Banner/Banner'
+import Footer from '../../../components/Footer/Footer'
+import BannerImage from '../../../Images/BannerAPropos.png';
 import './APropos.css'
 
 export default function About() {
