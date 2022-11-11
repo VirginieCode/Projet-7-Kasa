@@ -4,7 +4,7 @@ import BannerImage from "../../Images/BannerBackground.png";
 
 export default function Banner(props) {
   return (
-    <div className="Container">
+    <div className="ContainerBanner">
       <div className="Content">
         <h2 className="Titre">
           <span>{props.title}</span>

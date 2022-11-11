@@ -1,15 +1,21 @@
 
+
+
 .Collapse{
-    width: 800px;
+    width: 90%;
     height: auto;
-    border: 1px solid;
     margin: 30px auto 0;
-    border-radius: 3px;
+    
+}
+
+.Collapses{
+  
+    align-items: flex-start;
 }
 
 .Collapse-visible{
     background: #FF6060;
-    
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     color:#ffffff;
@@ -31,14 +37,17 @@
     font-size: 20px;
     opacity:0;
     background: #F6F6F6;
-    transition:  opacity 0.4s ease-in-out, height 0.4s 0.4s ease-in-out;
+    transition:  opacity 0.2s ease-in-out, height 0.1s 0.1s ease-in-out; 
     height: 0px;
+    visibility: hidden;
+    border-radius: 10px;
 }
 
 .Animation{
     opacity: 1;
-    transition: height 0.4s ease-in-out, opacity 0.4s 0.4s ease-in-out;
-    height: 150px;
+    transition: height 0.2s ease-in-out, opacity 0.1s 0.1s ease-in-out;
+    height: auto;
+    visibility: visible;
 }
 
 .Collapse-toggle p{
