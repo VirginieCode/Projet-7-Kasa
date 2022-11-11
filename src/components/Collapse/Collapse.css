@@ -1,3 +1,4 @@
+
 .Collapse{
     width: 800px;
     height: auto;
@@ -31,13 +32,16 @@
     opacity:0;
     background: #F6F6F6;
     transition:  opacity 0.4s ease-in-out, height 0.4s 0.4s ease-in-out;
+    height: 0px;
 }
 
 .Animation{
     opacity: 1;
     transition: height 0.4s ease-in-out, opacity 0.4s 0.4s ease-in-out;
+    height: 150px;
 }
 
 .Collapse-toggle p{
     font-family: Montserrat,sans-serif;
 }
+

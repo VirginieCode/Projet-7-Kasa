@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import '../Header/Header.css'
+import "../Header/Header.css";
 
 export default function NavBar() {
   return (
@@ -13,7 +13,7 @@ export default function NavBar() {
       >
         Accueil
       </NavLink>
-      
+
       <NavLink
         to="/APropos"
         className={({ isActive }) => {

@@ -1,36 +1,35 @@
-import React, {useState, useRef, useEffect} from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./Collapse.css";
 import Fleche from "../../Images/Fleche.svg";
 
+
+
+
 export default function Collapse(props) {
+  const [toggle, setToggle] = useState(false);
 
-    const[toggle, setToggle] = useState(false);
+ 
+  const toggleState = () => {
+    setToggle(!toggle);
+  };
 
-    const [heightEl, setHeightEl] = useState();
-    const toggleState = () => {
-        setToggle(!toggle);
-    }
+  
 
-    const refHeight = useRef();
-
-    useEffect(() => {
-    
-        setHeightEl(`${refHeight.current.scrollHeight}px`)
-    }, []);
-    
   return (
     <div className="Collapse">
       <div onClick={toggleState} className="Collapse-visible">
-        <h1> <span>{props.title}</span> </h1>
+        <h1>
+          {" "}
+          <span>{props.title}</span>{" "}
+        </h1>
         <img src={Fleche} alt="Fleche directionelle" />
       </div>
-      <div ref={refHeight}
-      className={toggle ? "Collapse-toggle Animation" : 'Collapse-toggle'}
-      style={{height: toggle ? `${heightEl}`: "0px"}}
+      <div
+      
+        className={toggle ? "Collapse-toggle Animation" : "Collapse-toggle"}
+        
       >
-        <p>
-          {props.description}
-        </p>
+        <p>{props.description}</p>
       </div>
     </div>
   );
