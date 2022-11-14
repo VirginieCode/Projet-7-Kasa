@@ -10,9 +10,8 @@ export default function Home() {
     <div className="Acceuil">
       <Header />
       <Banner title="Chez vous, partout et ailleurs" img={BannerImage} />
-      
       <Cards />
-   
+      <Footer />
     </div>
   );
 }

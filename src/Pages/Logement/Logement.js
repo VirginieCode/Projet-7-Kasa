@@ -6,8 +6,19 @@ import "../../components/Logement Data/Logement.json";
 import Collapse from "../../components/Collapse/Collapse";
 import Carrousel from "../../components/Carrousel/Carrousel";
 import Footer from "../../components/Footer/Footer";
-
 import "./Logement.css";
+
+import styled from "styled-components";
+
+const CollapseStyleLogement = styled.div`
+  width: 85%;
+  height: auto;
+  margin: 30px auto 0;
+
+  @media only screen and (max-width: 1024px) {
+    width: 90%;
+  }
+`;
 
 export default function Logement() {
   const ID = useParams();
@@ -23,6 +34,10 @@ export default function Logement() {
   const lesTags = findLogement.tags;
 
   const lesEquipements = findLogement.equipments;
+
+  const eachEquipement = lesEquipements.map((Equip) => (
+    <li style={{ listStyle: "none" }}>{Equip}</li>
+  ));
 
   const starSVGRose = (
     <svg
@@ -86,44 +101,47 @@ export default function Logement() {
     <div key={ID}>
       <Header />
 
-      <div className="container">
-        <Carrousel slides={findLogement.pictures} />
-
-        <div className="titleEThost">
-          <h1> {findLogement.title}</h1>
-          <div className="host">
-            <p>{findLogement.host.name}</p>
-            <img src={findLogement.host.picture} img />
-          </div>
-        </div>
-
-        <p className="location">{findLogement.location}</p>
-
-        <div className="TagETStars">
-          <div className="tags">
-            {lesTags.map((tag) => (
-              <button className="tag">{tag}</button>
-            ))}
+      <Carrousel slides={findLogement.pictures} />
+      <div className="ContainerLogement">
+        <div className="contenuContainer">
+          <div className="containerTitreLocationTags">
+            <h1 className="TitreLogement"> {findLogement.title}</h1>
+            <p className="location">{findLogement.location}</p>
+            <div className="tags">
+              {lesTags.map((tag) => (
+                <button className="tag">{tag}</button>
+              ))}
+            </div>
           </div>
 
-          <div className="Rating">{ratingArray}</div>
+          <div className="containerHostRating">
+            <div className="host">
+              <p>{findLogement.host.name}</p>
+              <img src={findLogement.host.picture} img />
+            </div>
+            <div className="rating">{ratingArray}</div>
+          </div>
         </div>
-
+      </div>
+      <div className="collapsesContainer">
         <div className="Collapses">
-          <Collapse
-            title="Description"
-            description={findLogement.description}
-          />
-          
+          <CollapseStyleLogement>
+            <Collapse
+              title="Description"
+              description={findLogement.description}
+            />
+          </CollapseStyleLogement>
+
+          <CollapseStyleLogement>
             <Collapse
               className="Equipement"
               title="Equipements"
-              description={findLogement.equipments}
+              description={eachEquipement}
             />
-          
+          </CollapseStyleLogement>
         </div>
-        
       </div>
+
       <Footer />
     </div>
   );

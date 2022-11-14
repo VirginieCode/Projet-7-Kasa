@@ -1,31 +1,31 @@
 .Container{
    
-  
-
+  display: flex;
+  justify-content: center;
+ 
     margin-top: 15px;
    /* position: relative;*/
    
 }
 
 .Background{
-   /*  width: auto;
-    height: auto;
-    background-color: red;
-    
-   display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    */
+  
   
     border-radius: 25px;
-    background-color: red;
-    padding: 50px;
-    gap: 10px;
-    grid-template-columns: repeat(3, 1fr);
-    display: grid;
-    position: relative;
+    background-color: #E3E3E3;
+    width: 85%;
+    gap: 20px;
+ 
+    display: flex;
+    flex-wrap: wrap;
     object-fit: cover;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    padding-top: 20px;
     padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     
 }
 
@@ -33,7 +33,8 @@
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-  
+    width: 340px;
+    height: 340px;
     
     
 }
@@ -42,8 +43,8 @@
     position:absolute;
     top:0;
     left: 0;
-    width:100%;
-    height: 100%;
+    width: 340px;
+    height: 340px;
     background: rgb(0,0,0);
     background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.8) 100%);
     display: flex;
@@ -53,8 +54,8 @@
     
 }
 .Cover{
-    width: 250px;
-    height: 250px;
+    width: 340px;
+    height: 340px;
     display: block;
   
    
@@ -71,7 +72,31 @@
     color: #ffffff;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
 
- 
+    .Background{
+        background-color: white;
+    }
+
+  
 }
+
+@media only screen and (min-width: 600px) and  (max-width:871px) {
+
+    .Background{
+        background-color: white;
+    }
+
+    .box, .box-content, .Cover{
+      
+        width: 400px;
+        height: 400px;
+        
+        
+    }
+   
+    
+  
+}
+
+

@@ -10,7 +10,7 @@ export default function Cards() {
         {Logement.map((Logement) => {
           return (
             <a href={`/Logement/${Logement.id}`}>
-              <div className="box" key={Logement.id}>
+              <div className="box" /*key={Logement.id}*/>
                 <div className="box-content">
                  
                   <p className="Title">{Logement.title}</p>

@@ -1,6 +1,14 @@
+.ContainerBanner{
+    display: flex;
+    height: 223px;
+  
+justify-content: center;
 
+align-content: center;
+}
 .Content{
     position: relative;
+    width: 90%;
 }
 .Titre{
     font-family: Montserrat,sans-serif;
@@ -20,8 +28,9 @@
 }
 .Image{
 height: 223px;
-width: 90%;
+width: 95%;
 border-radius: 25px;
 filter: brightness(70%);
 z-index: -2;
+
 }

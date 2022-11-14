@@ -1,12 +1,12 @@
 
 
 
-.Collapse{
-    width: 90%;
+/*.Collapse{
+    width: 70%;
     height: auto;
     margin: 30px auto 0;
     
-}
+}*/
 
 .Collapses{
   
@@ -48,9 +48,9 @@
     transition: height 0.2s ease-in-out, opacity 0.1s 0.1s ease-in-out;
     height: auto;
     visibility: visible;
+    padding: 10px;
 }
 
 .Collapse-toggle p{
     font-family: Montserrat,sans-serif;
 }
-
