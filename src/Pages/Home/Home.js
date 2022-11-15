@@ -14,13 +14,14 @@ const bannerSize = style.div`
   }
 `
 
+
 // Home page creation
 
 export default function Home() {
   return (
     <div className="Home">
       <Header />
-     <bannerSize> <Banner title="Chez vous, partout et ailleurs" img={BannerImage} /> </bannerSize>
+     <bannerSize> <div className="imagebanner"> <Banner title="Chez vous, partout et ailleurs" img={BannerImage} /> </div> </bannerSize>
       <Cards />
       <Footer />
     </div>

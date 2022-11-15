@@ -4,6 +4,7 @@ import Header from "../../../components/Header/Header";
 import Banner from "../../../components/Banner/Banner";
 import Footer from "../../../components/Footer/Footer";
 import BannerImage from "../../../Images/BannerAPropos.png";
+import ImageMobile from "../../../Images/BannerAboutMobile.png";
 import "./About.css";
 
 import styled from "styled-components";
@@ -29,7 +30,8 @@ export default function About() {
   return (
     <div>
       <Header /> 
-      <Banner img={BannerImage} /> 
+      <div className="bannerDesktop"><Banner img={BannerImage} /> </div>
+     <div className="bannerMobile" > <Banner img={ImageMobile} /> </div>
       <div className="Container">
         <CollapseStyle>
           <Collapse

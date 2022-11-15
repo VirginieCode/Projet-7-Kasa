@@ -3,11 +3,17 @@
   justify-content: space-between;
   position: absolute;
   z-index: 5;
-
-  width: 80%;
+  width: 85%;
   align-items: center;
   align-content: center;
-  top: 30%;
+  top: 37%;
+  margin-top: 90px;
+  
+}
+
+.containerArrow button{
+  width: 46px;
+  height: 79px;
 }
 
 .Carrousel {
@@ -35,21 +41,21 @@
     height: 255px;
   }
 
-  .containerArrow {
-    top: 42%;
-  }
-
-  .previousButton,
-  .nextButton {
-    width: 12px;
-    height: 20px;
-  }
+  
+.containerArrow{
+  margin-top: 0;
+  top:42%;
 }
 
-@media only screen and (max-width: 990px) {
-  .previousButton,
-  .nextButton {
-    width: 18px;
-    height: 25px;
-  }
+.containerArrow button{
+  width: 11px;
+  height: 18px;
 }
+
+  
+}
+
+
+
+
+
