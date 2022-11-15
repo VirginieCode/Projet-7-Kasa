@@ -1,21 +1,21 @@
 import React from "react";
 import "./Cards.css";
-import Logement from "../Logement Data/Logement.json";
-import Footer from "../Footer/Footer";
+import LocationData from "../LogementData/Logement.json";
+
+//Creation of each accomodation card
 
 export default function Cards() {
   return (
     <div className="Container">
       <div className="Background">
-        {Logement.map((Logement) => {
+        {LocationData.map((Location) => {
           return (
-            <a href={`/Logement/${Logement.id}`}>
-              <div className="box" /*key={Logement.id}*/>
+            <a href={`/Accommodation/${Location.id}`} key={Location.id}>
+              <div className="box">
                 <div className="box-content">
-                 
-                  <p className="Title">{Logement.title}</p>
+                  <p className="Title">{Location.title}</p>
                 </div>
-                <img className="Cover" src={Logement.cover} />
+                <img className="Cover" src={Location.cover} />
               </div>
             </a>
           );

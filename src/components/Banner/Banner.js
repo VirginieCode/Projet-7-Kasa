@@ -1,12 +1,13 @@
 import React from "react";
 import "./Banner.css";
-import BannerImage from "../../Images/BannerBackground.png";
+
+//Banner creation
 
 export default function Banner(props) {
   return (
     <div className="ContainerBanner">
       <div className="Content">
-        <h2 className="Titre">
+        <h2 className="titleBanner">
           <span>{props.title}</span>
         </h2>
         <img className="Image" src={props.img} alt="" />

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import "../Logement Data/Logement.json";
+import "../LogementData/Logement.json";
 import "./Carrousel.css";
+
+//Carrousel creation
 
 export default function Carrousel({ slides }) {
   const [currentImage, setCurrentImage] = useState(0);
@@ -9,14 +11,14 @@ export default function Carrousel({ slides }) {
     setCurrentImage(currentImage === 0 ? slides.length - 1 : currentImage - 1);
   };
 
-  const previousFleche = (
+  const previousArrow = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="100"
-      height="100"
+     
       fill="white"
       class="bi bi-chevron-left"
       viewBox="0 0 16 16"
+      
     >
       <path
         fill-rule="evenodd"
@@ -29,14 +31,14 @@ export default function Carrousel({ slides }) {
     setCurrentImage(currentImage === slides.length - 1 ? 0 : currentImage + 1);
   };
 
-  const nextFleche = (
+  const nextArrow = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="100"
-      height="100"
+      
       fill="white"
       class="bi bi-chevron-right"
       viewBox="0 0 16 16"
+      
     >
       <path
         fill-rule="evenodd"
@@ -47,17 +49,19 @@ export default function Carrousel({ slides }) {
 
   return (
     <div className="Carrousel">
+
+      <div className="containerArrow">
       <button onClick={previousSlide} className="previousButton">
-        {previousFleche}
+        {previousArrow}
       </button>
 
       <button onClick={nextSlide} className="nextButton">
-        {nextFleche}
+        {nextArrow}
       </button>
-
+      </div>
       {slides.map((slide, index) => {
         return (
-          <div className="carrouselContainer">
+          <div className="SliderImage">
             {index === currentImage && (
               <img className="imageSlide" src={slide} />
             )}

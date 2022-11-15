@@ -1,18 +1,19 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Home from "./Pages/Acceuil/Accueil";
-import About from "./Pages/About/APropos/APropos";
-import Logement from "./Pages/Logement/Logement";
-import Erreur from "./Pages/Erreur404/Erreur404";
+import Home from "./Pages/Home/Home";
+import About from "./Pages/About/About/About";
+import Location from "./Pages/Accommodation/Accommodation";
+import Erreur from "./Pages/Error404/Error404";
+import Accommodation from "./Pages/Accommodation/Accommodation";
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/acceuil" element={<Home />} />
+        <Route path="/Home" element={<Home />} />
         <Route path="/APropos" element={<About />} />
-        <Route path="/Logement/:id" element={<Logement />} />
+        <Route path="/Accommodation/:id" element={<Accommodation />} />
         <Route path="*" element={<Erreur />} />
       </Routes>
     </div>

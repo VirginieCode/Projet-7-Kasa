@@ -2,6 +2,8 @@ import React from "react";
 import "./Footer.css";
 import Logo from "../../Images/Logo-Footer.png";
 
+//Footer creation
+
 export default function Footer() {
   return (
     <div className="Footer">

@@ -1,34 +1,55 @@
+.containerArrow {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 5;
 
-.carrouselConatainer{
-    left: 0px;
-    top: 0px;
-    border-radius: 25px;
-    border: solid black 2px;
-    margin: auto;
+  width: 80%;
+  align-items: center;
+  align-content: center;
+  top: 30%;
 }
 
-.imageSlide{
-    width: 85%;
-    height: 300px;
-    margin-top: 20px;
-    border-radius: 10px;
+.Carrousel {
+  max-width: 85%;
+  height: 415px;
+  margin: auto;
 }
 
-.previousButton, .nextButton{
-    background: none;
-    border:none;
-    position: absolute;
-    z-index: 5;
+.imageSlide {
+  width: 100%;
+  height: 415px;
+
+  border-radius: 10px;
 }
 
-.previousButton{
-    left: 0;
-    margin-left: 30px;
-    margin-top: 110px;
+.previousButton,
+.nextButton {
+  background: none;
+  border: none;
 }
 
-.nextButton{
-    right: 0;
-    margin-right: 30px;
-    margin-top: 110px;
+@media only screen and (max-width: 450px) {
+  .Carrousel,
+  .imageSlide {
+    height: 255px;
+  }
+
+  .containerArrow {
+    top: 42%;
+  }
+
+  .previousButton,
+  .nextButton {
+    width: 12px;
+    height: 20px;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .previousButton,
+  .nextButton {
+    width: 18px;
+    height: 25px;
+  }
 }
