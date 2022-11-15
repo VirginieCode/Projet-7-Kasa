@@ -25,17 +25,14 @@ const CollapseStyleLocation = style.div`
   }
 `;
 
-
-
 export default function Accommodation() {
-
   // Slot ID retrieval
 
   const ID = useParams();
 
   console.log(ID);
 
-// The ID retrieve with useParams needs to match with the accommodation ID.
+  // The ID retrieve with useParams needs to match with the accommodation ID.
 
   const findLogement = LogementFile.find(
     (theLocation) => theLocation.id === ID.id
@@ -47,7 +44,7 @@ export default function Accommodation() {
     return <ErrorPage />;
   }
 
-// const theTags declaration
+  // const theTags declaration
 
   const theTags = findLogement.tags;
 
@@ -114,28 +111,27 @@ export default function Accommodation() {
       <Header />
       <div className="ContainerContent">
         <Carrousel slides={findLogement.pictures} />
-       
-          <div className="contenuContainer">
-            <div className="containerTitreLocationTags">
-              <h1 className="TitreLogement"> {findLogement.title}</h1>
-              <p className="location">{findLogement.location}</p>
-              <div className="tags">
-                {theTags.map((tag) => (
-                  <button className="tag" key={tag}>
-                    {tag}
-                  </button>
-                ))}
-              </div>
-            </div>
 
-            <div className="containerHostRating">
-              <div className="host">
-                <p>{findLogement.host.name}</p>
-                <img src={findLogement.host.picture} img />
-              </div>
-              <div className="rating">{ratingArray}</div>
+        <div className="contenuContainer">
+          <div className="containerTitreLocationTags">
+            <h1 className="TitreLogement"> {findLogement.title}</h1>
+            <p className="location">{findLogement.location}</p>
+            <div className="tags">
+              {theTags.map((tag) => (
+                <button className="tag" key={tag}>
+                  {tag}
+                </button>
+              ))}
             </div>
-         
+          </div>
+
+          <div className="containerHostRating">
+            <div className="host">
+              <p>{findLogement.host.name}</p>
+              <img src={findLogement.host.picture} img />
+            </div>
+            <div className="rating">{ratingArray}</div>
+          </div>
         </div>
         <div className="collapsesContainer">
           <div className="Collapses">
@@ -147,9 +143,7 @@ export default function Accommodation() {
             </CollapseStyleLocation>
 
             <CollapseStyleLocation>
-            
               <Collapse
-              
                 className="Equipement"
                 title="Equipements"
                 description={eachEquipement}

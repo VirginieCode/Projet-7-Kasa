@@ -12,8 +12,7 @@ const bannerSize = style.div`
   @media only screen and (max-width: 424px) {
     height: 111px;
   }
-`
-
+`;
 
 // Home page creation
 
@@ -21,7 +20,16 @@ export default function Home() {
   return (
     <div className="Home">
       <Header />
-     <bannerSize> <div className="imagebanner"> <Banner title="Chez vous, partout et ailleurs" img={BannerImage} /> </div> </bannerSize>
+      <bannerSize>
+        {" "}
+        <div className="imagebanner">
+          {" "}
+          <Banner
+            title="Chez vous, partout et ailleurs"
+            img={BannerImage}
+          />{" "}
+        </div>{" "}
+      </bannerSize>
       <Cards />
       <Footer />
     </div>

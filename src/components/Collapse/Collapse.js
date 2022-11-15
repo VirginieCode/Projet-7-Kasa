@@ -21,7 +21,9 @@ export default function Collapse(props) {
         <img src={Fleche} alt="Arrow directional" />
       </div>
       <div className={toggle ? "Collapse-toggle Animation" : "Collapse-toggle"}>
-        <p style={{ color: "#FF6060", textAlign:"left" }}>{props.description}</p>
+        <p style={{ color: "#FF6060", textAlign: "left" }}>
+          {props.description}
+        </p>
       </div>
     </div>
   );

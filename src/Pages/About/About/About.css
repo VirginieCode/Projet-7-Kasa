@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  /*border: solid black;*/
 }
 
 .Container {
@@ -13,20 +12,16 @@
   margin-bottom: 100px;
 }
 
-.bannerMobile{
+.bannerMobile {
   display: none;
 }
 
 @media only screen and (max-width: 450px) {
+  .bannerMobile {
+    display: block;
+  }
 
-
-.bannerMobile{
-  display: block;
+  .bannerDesktop {
+    display: none;
+  }
 }
-
-.bannerDesktop{
-  display: none;
-}
-
-}
-

@@ -14,11 +14,9 @@ export default function Carrousel({ slides }) {
   const previousArrow = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-     
       fill="white"
       class="bi bi-chevron-left"
       viewBox="0 0 16 16"
-      
     >
       <path
         fill-rule="evenodd"
@@ -34,11 +32,9 @@ export default function Carrousel({ slides }) {
   const nextArrow = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      
       fill="white"
       class="bi bi-chevron-right"
       viewBox="0 0 16 16"
-      
     >
       <path
         fill-rule="evenodd"
@@ -49,15 +45,14 @@ export default function Carrousel({ slides }) {
 
   return (
     <div className="Carrousel">
-
       <div className="containerArrow">
-      <button onClick={previousSlide} className="previousButton">
-        {previousArrow}
-      </button>
+        <button onClick={previousSlide} className="previousButton">
+          {previousArrow}
+        </button>
 
-      <button onClick={nextSlide} className="nextButton">
-        {nextArrow}
-      </button>
+        <button onClick={nextSlide} className="nextButton">
+          {nextArrow}
+        </button>
       </div>
       {slides.map((slide, index) => {
         return (

@@ -9,8 +9,6 @@ import "./About.css";
 
 import styled from "styled-components";
 
-
-
 // styled component collapse
 
 const CollapseStyle = styled.div`
@@ -22,16 +20,19 @@ const CollapseStyle = styled.div`
   }
 `;
 
-
-
-// About page creation 
+// About page creation
 
 export default function About() {
   return (
     <div>
-      <Header /> 
-      <div className="bannerDesktop"><Banner img={BannerImage} /> </div>
-     <div className="bannerMobile" > <Banner img={ImageMobile} /> </div>
+      <Header />
+      <div className="bannerDesktop">
+        <Banner img={BannerImage} />{" "}
+      </div>
+      <div className="bannerMobile">
+        {" "}
+        <Banner img={ImageMobile} />{" "}
+      </div>
       <div className="Container">
         <CollapseStyle>
           <Collapse
@@ -65,7 +66,6 @@ export default function About() {
           En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
           />
         </CollapseStyle>
-       
       </div>
       <Footer />
     </div>
