@@ -25,6 +25,7 @@ const CollapseStyleLocation = style.div`
   }
 `;
 
+
 export default function Accommodation() {
   // Slot ID retrieval
 
@@ -35,7 +36,7 @@ export default function Accommodation() {
   // The ID retrieve with useParams needs to match with the accommodation ID.
 
   const findLogement = LogementFile.find(
-    (theLocation) => theLocation.id === ID.id
+    (theAccomodation) => theAccomodation.id === ID.id
   );
 
   //if the ID no match, redirect to error page.
@@ -54,8 +55,8 @@ export default function Accommodation() {
 
   //Map for each equipement
 
-  const eachEquipement = theEquipements.map((Equip) => (
-    <li key={Equip} style={{ listStyle: "none" }}>{Equip} </li>
+  const eachEquipement = theEquipements.map((Equip, index) => (
+    <li key={index} style={{ listStyle: "none" }}>{Equip} </li>
   ));
 
   // const creation for stars svg
@@ -113,16 +114,16 @@ export default function Accommodation() {
             <h1 className="TitreLogement"> {findLogement.title}</h1>
             <p className="location">{findLogement.location}</p>
             <div className="tags">
-              {theTags.map((tag) => (
-                <button className="tag" key={tag}>
-                  {tag}
+              {theTags.map((tag,index) => (
+                <button key={index} className="tag" >
+                 {tag}
                 </button>
               ))}
             </div>
           </div>
 
           <div className="containerHostRating">
-            <div className="host">
+            <div className="host" >
               <p>{findLogement.host.name}</p>
               <img src={findLogement.host.picture} img />
             </div>

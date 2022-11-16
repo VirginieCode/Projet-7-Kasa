@@ -56,9 +56,9 @@ export default function Carrousel({ slides }) {
       </div>
       {slides.map((slide, index) => {
         return (
-          <div className="SliderImage">
+          <div  key={index} className="SliderImage">
             {index === currentImage && (
-              <img key={slide} className="imageSlide" src={slide} />
+              <img className="imageSlide" src={slide} />
             )}
           </div>
         );
