@@ -55,7 +55,7 @@ export default function Accommodation() {
   //Map for each equipement
 
   const eachEquipement = theEquipements.map((Equip) => (
-    <li style={{ listStyle: "none" }}>{Equip}</li>
+    <li key={Equip} style={{ listStyle: "none" }}>{Equip} </li>
   ));
 
   // const creation for stars svg
@@ -69,9 +69,7 @@ export default function Accommodation() {
         />
       </g>
       <defs>
-        <clipPath id="clip0_26_172">
-          <rect width="36" height="36" fill="white" />
-        </clipPath>
+      
       </defs>
     </svg>
   );
@@ -85,9 +83,7 @@ export default function Accommodation() {
         />
       </g>
       <defs>
-        <clipPath id="clip0_26_172">
-          <rect width="36" height="36" fill="white" />
-        </clipPath>
+       
       </defs>
     </svg>
   );

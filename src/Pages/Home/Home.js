@@ -6,30 +6,17 @@ import Footer from "../../components/Footer/Footer";
 import "./Home.css";
 import BannerImage from "../../Images/BannerBackground.png";
 
-import style from "styled-components";
-
-const bannerSize = style.div`
-  @media only screen and (max-width: 424px) {
-    height: 111px;
-  }
-`;
-
 // Home page creation
 
 export default function Home() {
   return (
     <div className="Home">
       <Header />
-      <bannerSize>
-        {" "}
-        <div className="imagebanner">
-          {" "}
-          <Banner
-            title="Chez vous, partout et ailleurs"
-            img={BannerImage}
-          />{" "}
-        </div>{" "}
-      </bannerSize>
+
+      <div className="imagebanner">
+        <Banner title="Chez vous, partout et ailleurs" img={BannerImage} />
+      </div>
+
       <Cards />
       <Footer />
     </div>
