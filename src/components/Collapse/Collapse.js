@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./Collapse.css";
-import Fleche from "../../Images/Fleche.svg";
+import chevronUp from "../../Images/Fleche.svg";
 
 //Collapse creation
 
@@ -18,7 +18,11 @@ export default function Collapse(props) {
           {" "}
           <span>{props.title}</span>
         </h1>
-        <img src={Fleche} alt="Arrow directional" />
+        <img
+          className={toggle ? "chevronDown" : "chevronUp"}
+          src={chevronUp}
+          alt="Arrow directional"
+        />
       </div>
       <div className={toggle ? "Collapse-toggle Animation" : "Collapse-toggle"}>
         <p style={{ color: "#FF6060", textAlign: "left" }}>
