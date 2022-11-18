@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import "./Collapse.css";
 import chevronUp from "../../Images/Fleche.svg";
 

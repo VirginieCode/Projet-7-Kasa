@@ -42,7 +42,7 @@ export default function Carrousel({ slides }) {
         return (
           <div key={index} className="SliderImage">
             {index === currentImage && (
-              <img className="imageSlide" src={slide} />
+              <img className="imageSlide" src={slide} alt="Slider" />
             )}
           </div>
         );

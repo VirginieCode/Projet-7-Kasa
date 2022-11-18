@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+
 import Header from "../../components/Header/Header";
-import { Route, Link, Routes, useParams } from "react-router-dom";
+import {useParams } from "react-router-dom";
 import LogementFile from "../../components/LogementData/Logement.json";
 import "../../components/LogementData/Logement.json";
 import Collapse from "../../components/Collapse/Collapse";
@@ -54,7 +54,6 @@ export default function Accommodation() {
 
   const theEquipements = findLogement.equipments;
 
-  const hostPicture = findLogement.host.picture;
 
   //Map for each equipement
 
@@ -115,7 +114,7 @@ export default function Accommodation() {
           <div className="containerHostRating">
             <div key={findLogement.host.name} className="host">
               <p className="name"> {findLogement.host.name} </p>
-              <img className="picture" src={findLogement.host.picture} />
+              <img className="picture" src={findLogement.host.picture} alt="host" />
             </div>
             <div className="rating">{ratingArray}</div>
           </div>

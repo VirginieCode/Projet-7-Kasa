@@ -15,7 +15,7 @@ export default function Cards() {
                 <div className="box-content">
                   <p className="Title">{Location.title}</p>
                 </div>
-                <img className="Cover" src={Location.cover} />
+                <img className="Cover" src={Location.cover} alt="Location" />
               </div>
             </a>
           );
