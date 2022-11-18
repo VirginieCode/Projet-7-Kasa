@@ -75,7 +75,7 @@
   font-size: 14px;
 }
 
-.rating svg {
+.stars {
   height: 30px;
   width: 30px;
 }
@@ -98,7 +98,7 @@
     font-size: 25px;
   }
 
-  .rating svg {
+  .stars {
     height: 30px;
     width: 30px;
   }
@@ -131,7 +131,7 @@
     margin-bottom: 20px;
   }
 
-  .rating svg {
+  .stars {
     height: 25px;
     width: 25px;
   }
@@ -177,7 +177,7 @@
     width: 32px;
   }
 
-  .rating svg {
+  .stars {
     height: 15px;
     width: 15px;
   }

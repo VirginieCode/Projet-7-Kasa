@@ -8,6 +8,8 @@ import Carrousel from "../../components/Carrousel/Carrousel";
 import Footer from "../../components/Footer/Footer";
 import "./Accommodation.css";
 import ErrorPage from "../Error404/Error404";
+import starsPink from "../../Images/starsRose.svg"
+import starsGrey from "../../Images/starsGrey.svg"
 
 import style from "styled-components";
 
@@ -39,6 +41,8 @@ export default function Accommodation() {
     (theAccomodation) => theAccomodation.id === ID.id
   );
 
+  
+
   //if the ID no match, redirect to error page.
 
   if (!findLogement) {
@@ -53,6 +57,8 @@ export default function Accommodation() {
 
   const theEquipements = findLogement.equipments;
 
+  const hostPicture = findLogement.host.picture;
+
   //Map for each equipement
 
   const eachEquipement = theEquipements.map((Equip, index) => (
@@ -61,33 +67,7 @@ export default function Accommodation() {
 
   // const creation for stars svg
 
-  const starSVGRose = (
-    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g clip-path="url(#clip0_26_172)">
-        <path
-          d="M21.645 15L18 3L14.355 15H3L12.27 21.615L8.745 33L18 25.965L27.27 33L23.745 21.615L33 15H21.645Z"
-          fill="#FF6060"
-        />
-      </g>
-      <defs>
-      
-      </defs>
-    </svg>
-  );
-
-  const starSVGGrise = (
-    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g clip-path="url(#clip0_26_172)">
-        <path
-          d="M21.645 15L18 3L14.355 15H3L12.27 21.615L8.745 33L18 25.965L27.27 33L23.745 21.615L33 15H21.645Z"
-          fill="#E3E3E3"
-        />
-      </g>
-      <defs>
-       
-      </defs>
-    </svg>
-  );
+ 
 
   // for loop, for push the good pink and grey stars
 
@@ -96,23 +76,24 @@ export default function Accommodation() {
   const ratingArray = [];
 
   for (let i = 0; i < stars; i++) {
-    ratingArray.push(starSVGRose);
+    ratingArray.push(<img className="stars" src={starsPink} alt="Pink Stars" />)
   }
 
   for (let a = ratingArray.length; a < 5; a++) {
-    ratingArray.push(starSVGGrise);
+    ratingArray.push(<img className="stars" src={starsGrey} alt="Grey Stars" />)
   }
 
   return (
-    <div key={ID}>
+    <div>
       <Header />
       <div className="ContainerContent">
         <Carrousel slides={findLogement.pictures} />
 
         <div className="contenuContainer">
           <div className="containerTitreLocationTags">
-            <h1 className="TitreLogement"> {findLogement.title}</h1>
-            <p className="location">{findLogement.location}</p>
+            { findLogement && <h1 className="TitreLogement"> {findLogement.title}</h1> }
+            { findLogement && <p className="location">{findLogement.location}</p>}
+              
             <div className="tags">
               {theTags.map((tag,index) => (
                 <button key={index} className="tag" >
@@ -124,8 +105,8 @@ export default function Accommodation() {
 
           <div className="containerHostRating">
             <div className="host" >
-              <p>{findLogement.host.name}</p>
-              <img src={findLogement.host.picture} img />
+            { findLogement &&  <p>{findLogement.host.name}</p> }
+            { findLogement &&  <img src={hostPicture} /> }
             </div>
             <div className="rating">{ratingArray}</div>
           </div>
