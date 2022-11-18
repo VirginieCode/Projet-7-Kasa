@@ -58,12 +58,6 @@ export default function Accommodation() {
 
   //Map for each equipement
 
-  const eachEquipement = theEquipements.map((Equip) => (
-    <li key={Equip} style={{ listStyle: "none" }}>
-      {Equip}
-    </li>
-  ));
-
   // const creation for stars svg
 
   // for loop, for push the good pink and grey stars
@@ -74,13 +68,23 @@ export default function Accommodation() {
 
   for (let i = 0; i < stars; i++) {
     ratingArray.push(
-      <img className="stars" src={starsPink} alt="Pink Stars" />
+      <img
+        key={"pinkStar" + i}
+        className="stars"
+        src={starsPink}
+        alt="Pink Stars"
+      />
     );
   }
 
   for (let a = ratingArray.length; a < 5; a++) {
     ratingArray.push(
-      <img className="stars" src={starsGrey} alt="Grey Stars" />
+      <img
+        key={"greyStar" + a}
+        className="stars"
+        src={starsGrey}
+        alt="Grey Stars"
+      />
     );
   }
 
@@ -109,14 +113,14 @@ export default function Accommodation() {
           </div>
 
           <div className="containerHostRating">
-            <div className="host">
-              
-              {findLogement && <p> {findLogement.host.name}</p>}
-              {findLogement && <img src={hostPicture} />}
+            <div key={findLogement.host.name} className="host">
+              <p className="name"> {findLogement.host.name} </p>
+              <img className="picture" src={findLogement.host.picture} />
             </div>
             <div className="rating">{ratingArray}</div>
           </div>
         </div>
+
         <div className="collapsesContainer">
           <div className="Collapses">
             <CollapseStyleLocation>
@@ -130,7 +134,11 @@ export default function Accommodation() {
               <Collapse
                 className="Equipement"
                 title="Equipements"
-                description={eachEquipement}
+                description={theEquipements.map((Equip) => (
+                  <li key={Equip} style={{ listStyle: "none" }}>
+                    {Equip}
+                  </li>
+                ))}
               />
             </CollapseStyleLocation>
           </div>
