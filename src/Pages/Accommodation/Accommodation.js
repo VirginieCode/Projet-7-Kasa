@@ -8,8 +8,8 @@ import Carrousel from "../../components/Carrousel/Carrousel";
 import Footer from "../../components/Footer/Footer";
 import "./Accommodation.css";
 import ErrorPage from "../Error404/Error404";
-import starsPink from "../../Images/starsRose.svg"
-import starsGrey from "../../Images/starsGrey.svg"
+import starsPink from "../../Images/starsRose.svg";
+import starsGrey from "../../Images/starsGrey.svg";
 
 import style from "styled-components";
 
@@ -27,7 +27,6 @@ const CollapseStyleLocation = style.div`
   }
 `;
 
-
 export default function Accommodation() {
   // Slot ID retrieval
 
@@ -40,8 +39,6 @@ export default function Accommodation() {
   const findLogement = LogementFile.find(
     (theAccomodation) => theAccomodation.id === ID.id
   );
-
-  
 
   //if the ID no match, redirect to error page.
 
@@ -61,13 +58,13 @@ export default function Accommodation() {
 
   //Map for each equipement
 
-  const eachEquipement = theEquipements.map((Equip, index) => (
-    <li key={index} style={{ listStyle: "none" }}>{Equip} </li>
+  const eachEquipement = theEquipements.map((Equip) => (
+    <li key={Equip} style={{ listStyle: "none" }}>
+      {Equip}
+    </li>
   ));
 
   // const creation for stars svg
-
- 
 
   // for loop, for push the good pink and grey stars
 
@@ -76,11 +73,15 @@ export default function Accommodation() {
   const ratingArray = [];
 
   for (let i = 0; i < stars; i++) {
-    ratingArray.push(<img className="stars" src={starsPink} alt="Pink Stars" />)
+    ratingArray.push(
+      <img className="stars" src={starsPink} alt="Pink Stars" />
+    );
   }
 
   for (let a = ratingArray.length; a < 5; a++) {
-    ratingArray.push(<img className="stars" src={starsGrey} alt="Grey Stars" />)
+    ratingArray.push(
+      <img className="stars" src={starsGrey} alt="Grey Stars" />
+    );
   }
 
   return (
@@ -91,22 +92,27 @@ export default function Accommodation() {
 
         <div className="contenuContainer">
           <div className="containerTitreLocationTags">
-            { findLogement && <h1 className="TitreLogement"> {findLogement.title}</h1> }
-            { findLogement && <p className="location">{findLogement.location}</p>}
-              
+            {findLogement && (
+              <h1 className="TitreLogement"> {findLogement.title}</h1>
+            )}
+            {findLogement && (
+              <p className="location">{findLogement.location}</p>
+            )}
+
             <div className="tags">
-              {theTags.map((tag,index) => (
-                <button key={index} className="tag" >
-                 {tag}
+              {theTags.map((tag, eachTag) => (
+                <button key={eachTag} className="tag">
+                  {tag}
                 </button>
               ))}
             </div>
           </div>
 
           <div className="containerHostRating">
-            <div className="host" >
-            { findLogement &&  <p>{findLogement.host.name}</p> }
-            { findLogement &&  <img src={hostPicture} /> }
+            <div className="host">
+              
+              {findLogement && <p> {findLogement.host.name}</p>}
+              {findLogement && <img src={hostPicture} />}
             </div>
             <div className="rating">{ratingArray}</div>
           </div>
