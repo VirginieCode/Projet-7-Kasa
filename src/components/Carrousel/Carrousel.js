@@ -52,7 +52,7 @@ export default function Carrousel({ slides }) {
         <div className="counterContainer">
           {" "}
           <p className="counter">
-            {currentImage} / {totalImages}
+            {currentImage+1} / {totalImages}
           </p>
         </div>
       )}
